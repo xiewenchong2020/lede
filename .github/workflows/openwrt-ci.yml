@@ -7,17 +7,16 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: OpenWrt-CI
-
+name: OpenWrt-CI  
+  
 on:
+  schedule:
+    - core:0 20 * * *
   push:
     branches: 
       - master
-  schedule:
-    - cron: 0 20 * * *
-  release:
-    types: [published]
-
+ 
+      
 jobs:
   build:
     runs-on: ubuntu-latest
