@@ -94,10 +94,6 @@ jobs:
           cat >> .config <<EOF
           CONFIG_TARGET_rockchip_rk3328=y
           CONFIG_TARGET_rockchip_rk3328_Default=y
-          CONFIG_TARGET_BOARD="rockchip-rk3328"
-          CONFIG_TARGET_SUBTARGET="generic"
-          CONFIG_TARGET_PROFILE="Default"
-          CONFIG_TARGET_ARCH_PACKAGES="aarch64_cortex-a53"
           EOF
           # 固件压缩:
           cat >> .config <<EOF
@@ -181,7 +177,7 @@ jobs:
           EOF
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
           cat >> .config <<EOF
-          CONFIG_TARGET_IMAGES_PAD is not set
+          # CONFIG_TARGET_IMAGES_PAD is not set
           # CONFIG_VMDK_IMAGES is not set
           EOF
           # 
